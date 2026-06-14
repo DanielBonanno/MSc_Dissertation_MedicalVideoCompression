@@ -1,0 +1,38 @@
+Training		- Training or Validation root folder
+|
+|_______CT		- Modality: CT, MRI or Ultrasound
+|	|
+|	|_______Set1	- A single scan of a particular modality
+|		|
+|		|_______DICOM	- Folder containing the DICOM files and info.txt. For Ultrasound this would be Original_Video
+|		|
+|		|_______BMP	
+|		|	|
+|		|	|_______Original
+|		|	|	|
+|		|	|	|_______FullFrame 	- Folder containing the images extracted from the DICOM Files
+|		|	|	|
+|		|	|	|_______Patches		- Patch representation of the images found in FullFrame
+|		|	|
+|		|	|_______x2 (similar for x4)	- Similar to original, but for downscaled versions
+|		|		|
+|		|		|_______FullFrame
+|		|		|
+|		|		|_______Patches
+|		|		
+|		|
+|		|_______Motion_Compensated
+|				|
+|				|_______x2 (similar for x4)	-Similar to Original, but for motion compensated versions
+|					|
+|					|_______FullFrame
+|					|
+|					|_______Patches
+|
+|
+|_______Training/Validation_Data.h5 - File containing the data to be used for Training or Validation
+|
+|
+|_______Training_HR/LR/MC.txt  - Randomly shuffled file paths for the patches (as explained in the documentation)
+
+		

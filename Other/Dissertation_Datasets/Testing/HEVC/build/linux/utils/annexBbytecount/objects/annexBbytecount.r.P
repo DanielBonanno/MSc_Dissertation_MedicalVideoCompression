@@ -1,0 +1,9 @@
+objects/annexBbytecount.r.o: \
+ /home/daniel/Downloads/HEVC/svn_HEVCSoftware/trunk/build/linux/utils/annexBbytecount/../../../../source/App/utils/annexBbytecount.cpp \
+ /home/daniel/Downloads/HEVC/svn_HEVCSoftware/trunk/build/linux/utils/annexBbytecount/../../../../source/Lib/TLibDecoder/AnnexBread.h \
+ /home/daniel/Downloads/HEVC/svn_HEVCSoftware/trunk/build/linux/utils/annexBbytecount/../../../../source/Lib/TLibCommon/CommonDef.h \
+ /home/daniel/Downloads/HEVC/svn_HEVCSoftware/trunk/build/linux/utils/annexBbytecount/../../../../source/Lib/TLibCommon/TypeDef.h
+ /home/daniel/Downloads/HEVC/svn_HEVCSoftware/trunk/build/linux/utils/annexBbytecount/../../../../source/App/utils/annexBbytecount.cpp :
+ /home/daniel/Downloads/HEVC/svn_HEVCSoftware/trunk/build/linux/utils/annexBbytecount/../../../../source/Lib/TLibDecoder/AnnexBread.h :
+ /home/daniel/Downloads/HEVC/svn_HEVCSoftware/trunk/build/linux/utils/annexBbytecount/../../../../source/Lib/TLibCommon/CommonDef.h :
+ /home/daniel/Downloads/HEVC/svn_HEVCSoftware/trunk/build/linux/utils/annexBbytecount/../../../../source/Lib/TLibCommon/TypeDef.h :

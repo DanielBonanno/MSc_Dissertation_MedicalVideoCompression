@@ -1,0 +1,23 @@
+objects/TAppDecCfg.r.o: \
+ /home/daniel/Downloads/HEVC/svn_HEVCSoftware/trunk/build/linux/app/TAppDecoderAnalyser/../../../../source/App/TAppDecoder/TAppDecCfg.cpp \
+ /home/daniel/Downloads/HEVC/svn_HEVCSoftware/trunk/build/linux/app/TAppDecoderAnalyser/../../../../source/App/TAppDecoder/TAppDecCfg.h \
+ /home/daniel/Downloads/HEVC/svn_HEVCSoftware/trunk/build/linux/app/TAppDecoderAnalyser/../../../../source/Lib/TLibCommon/CommonDef.h \
+ /home/daniel/Downloads/HEVC/svn_HEVCSoftware/trunk/build/linux/app/TAppDecoderAnalyser/../../../../source/Lib/TLibCommon/TypeDef.h \
+ /home/daniel/Downloads/HEVC/svn_HEVCSoftware/trunk/build/linux/app/TAppDecoderAnalyser/../../../../source/Lib/TAppCommon/program_options_lite.h \
+ /home/daniel/Downloads/HEVC/svn_HEVCSoftware/trunk/build/linux/app/TAppDecoderAnalyser/../../../../source/Lib/TLibCommon/TComChromaFormat.h \
+ /home/daniel/Downloads/HEVC/svn_HEVCSoftware/trunk/build/linux/app/TAppDecoderAnalyser/../../../../source/Lib/TLibCommon/CommonDef.h \
+ /home/daniel/Downloads/HEVC/svn_HEVCSoftware/trunk/build/linux/app/TAppDecoderAnalyser/../../../../source/Lib/TLibCommon/TComRectangle.h \
+ /home/daniel/Downloads/HEVC/svn_HEVCSoftware/trunk/build/linux/app/TAppDecoderAnalyser/../../../../source/Lib/TLibCommon/ContextTables.h \
+ /home/daniel/Downloads/HEVC/svn_HEVCSoftware/trunk/build/linux/app/TAppDecoderAnalyser/../../../../source/Lib/TLibCommon/TComRom.h \
+ /home/daniel/Downloads/HEVC/svn_HEVCSoftware/trunk/build/linux/app/TAppDecoderAnalyser/../../../../source/Lib/TLibCommon/Debug.h
+ /home/daniel/Downloads/HEVC/svn_HEVCSoftware/trunk/build/linux/app/TAppDecoderAnalyser/../../../../source/App/TAppDecoder/TAppDecCfg.cpp :
+ /home/daniel/Downloads/HEVC/svn_HEVCSoftware/trunk/build/linux/app/TAppDecoderAnalyser/../../../../source/App/TAppDecoder/TAppDecCfg.h :
+ /home/daniel/Downloads/HEVC/svn_HEVCSoftware/trunk/build/linux/app/TAppDecoderAnalyser/../../../../source/Lib/TLibCommon/CommonDef.h :
+ /home/daniel/Downloads/HEVC/svn_HEVCSoftware/trunk/build/linux/app/TAppDecoderAnalyser/../../../../source/Lib/TLibCommon/TypeDef.h :
+ /home/daniel/Downloads/HEVC/svn_HEVCSoftware/trunk/build/linux/app/TAppDecoderAnalyser/../../../../source/Lib/TAppCommon/program_options_lite.h :
+ /home/daniel/Downloads/HEVC/svn_HEVCSoftware/trunk/build/linux/app/TAppDecoderAnalyser/../../../../source/Lib/TLibCommon/TComChromaFormat.h :
+ /home/daniel/Downloads/HEVC/svn_HEVCSoftware/trunk/build/linux/app/TAppDecoderAnalyser/../../../../source/Lib/TLibCommon/CommonDef.h :
+ /home/daniel/Downloads/HEVC/svn_HEVCSoftware/trunk/build/linux/app/TAppDecoderAnalyser/../../../../source/Lib/TLibCommon/TComRectangle.h :
+ /home/daniel/Downloads/HEVC/svn_HEVCSoftware/trunk/build/linux/app/TAppDecoderAnalyser/../../../../source/Lib/TLibCommon/ContextTables.h :
+ /home/daniel/Downloads/HEVC/svn_HEVCSoftware/trunk/build/linux/app/TAppDecoderAnalyser/../../../../source/Lib/TLibCommon/TComRom.h :
+ /home/daniel/Downloads/HEVC/svn_HEVCSoftware/trunk/build/linux/app/TAppDecoderAnalyser/../../../../source/Lib/TLibCommon/Debug.h :

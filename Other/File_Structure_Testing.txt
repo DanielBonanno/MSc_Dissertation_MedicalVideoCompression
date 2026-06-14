@@ -1,0 +1,116 @@
+Testing		- Testing root folder
+|
+|_______CT		- Modality: CT, MRI or Ultrasound
+|	|
+|	|_______Set1	- A single scan of a particular modality
+|		|
+|		|
+|		|
+|		|_______coordinates - File detailing the ROI, as explained in the documentation
+|		|
+|		|_______Uncompressed	
+|		|	|
+|		|	|_______DICOM	- Folder containing the DICOM files and info.txt. For Ultrasound this would be in Video/Original_Video
+|		|	|			
+|		|	|_______BMP	
+|		|	|	|
+|		|	|	|_______Original - Contains the extracted dicom images / frames
+|		|	|	|
+|		|	|	|_______Padded - Padded version of Original/
+|		|	|	|
+|		|	|	|_______x2 - x2 Downscaled frames
+|		|	|	|
+|		|	|	|_______x4 - x4 Downscaled frames
+|		|	|			
+|		|	|_______Motion_Compensated
+|		|	|	|
+|		|	|	|_______x2 - x2 motion compensated frames
+|		|	|	|
+|		|	|	|_______x4 - x4 motion compensated frames
+|		|	|
+|		|	|_______Upscaled
+|		|	|		|	
+|		|	|		|_______x2 - x2 motion compensated frames
+|		|	|			|
+|		|	|			|_______Bicubic 
+|		|	|			|	|
+|		|	|			|	|_______EL_Post_Upscaling -the enhancement layer frames
+|		|	|			|	|
+|		|	|			|	|_______EL_Video_Bicubic - the enhancement layers as video
+|		|	|			|	|
+|		|	|			|	|_______Images - the upscaled frames
+|		|	|			|	|
+|		|	|			|	|_______Images+EL_Post_Upscaling - the upscaled frames + enhancement layer
+|		|	|			|
+|		|	|			|_______CNN
+|		|	|				|
+|		|	|				|_______6Layers - Structure similar to x2/Bicubic, but for the CNN with M = 6, 8 or 10
+|		|	|				|
+|		|	|				|_______8Layers
+|		|	|				|
+|		|	|				|_______10Layers		
+|		|	|_______Video	
+|		|		|
+|		|		|_______Padded - Padded version of the video
+|		|		|
+|		|		|_______x2 - x2 version of the video
+|		|		|
+|		|		|_______x4 - x4 version of the video
+|		|
+|		|
+|		|_______Compressed
+|			|
+|			|_______Original
+|			|	|
+|			|	|_______QPx	- QP24, 26, ... various QP values
+|			|		|
+|			|		|_______Frames
+|			|		|	|
+|			|		|	|_______EL_Post_Upscaling - the enhancement layer
+|			|		|	|
+|			|		|	|_______Extracted	- the extracted frames
+|			|		|	|
+|			|		|	|_______Image+EL_Post_Upscaling - the frames + enhancement layer
+|			|		|
+|			|		|
+|			|		|_______Video - Contains the video compressed at QPx
+|			|			|
+|			|			|_______EL_Video_Original - the enhancement layer video
+|			|
+|			|			
+|			|_______x2  - Contains the extracted dicom images / frames
+|				|
+|				|_______QPx	- QP24, 26, ... various QP values
+|					|
+|					|_______Frames
+|					|	|
+|					|	|_______Bicubic
+|					|	|	|
+|					|	|	|_______EL_Post_Upscaling -the enhancement layer frames
+|					|	|	|
+|					|	|	|_______Images - the upscaled frames
+|					|	|	|
+|					|	|	|_______Images+EL_Post_Upscaling - the upscaled frames + enhancement layer
+|					|	|
+|					|	|_______CNN
+|					|	|	|
+|					|	|	|_______6Layers - Structure similar to Bicubic (above), but for the CNN with M = 6, 8 or 10
+|					|	|	|
+|					|	|	|_______8Layers
+|					|	|	|
+|					|	|	|_______10Layers
+|					|	|
+|					|	|
+|					|	|_______Extracted	- the extracted frames
+|					|	|
+|					|	|_______Motion_Compensated - the motion compensated Frames
+|					|
+|					|
+|					|_______Video - Contains the video compressed at QPx
+|						|
+|						|_______EL_Video_Original - the enhancement layer video
+|
+|
+|
+|_______HEVC		- Contains the HEVC Encoder and Decoder, as well as the config files used
+		

@@ -1,0 +1,17 @@
+objects/SyntaxElementParser.r.o: \
+ /home/daniel/Downloads/HEVC/svn_HEVCSoftware/trunk/build/linux/lib/TLibDecoder/../../../../source/Lib/TLibDecoder/SyntaxElementParser.cpp \
+ /home/daniel/Downloads/HEVC/svn_HEVCSoftware/trunk/build/linux/lib/TLibDecoder/../../../../source/Lib/TLibCommon/CommonDef.h \
+ /home/daniel/Downloads/HEVC/svn_HEVCSoftware/trunk/build/linux/lib/TLibDecoder/../../../../source/Lib/TLibCommon/TypeDef.h \
+ /home/daniel/Downloads/HEVC/svn_HEVCSoftware/trunk/build/linux/lib/TLibDecoder/../../../../source/Lib/TLibCommon/TComRom.h \
+ /home/daniel/Downloads/HEVC/svn_HEVCSoftware/trunk/build/linux/lib/TLibDecoder/../../../../source/Lib/TLibCommon/CommonDef.h \
+ /home/daniel/Downloads/HEVC/svn_HEVCSoftware/trunk/build/linux/lib/TLibDecoder/../../../../source/Lib/TLibCommon/TComBitStream.h \
+ /home/daniel/Downloads/HEVC/svn_HEVCSoftware/trunk/build/linux/lib/TLibDecoder/../../../../source/Lib/TLibDecoder/SyntaxElementParser.h \
+ /home/daniel/Downloads/HEVC/svn_HEVCSoftware/trunk/build/linux/lib/TLibDecoder/../../../../source/Lib/TLibDecoder/TDecConformance.h
+ /home/daniel/Downloads/HEVC/svn_HEVCSoftware/trunk/build/linux/lib/TLibDecoder/../../../../source/Lib/TLibDecoder/SyntaxElementParser.cpp :
+ /home/daniel/Downloads/HEVC/svn_HEVCSoftware/trunk/build/linux/lib/TLibDecoder/../../../../source/Lib/TLibCommon/CommonDef.h :
+ /home/daniel/Downloads/HEVC/svn_HEVCSoftware/trunk/build/linux/lib/TLibDecoder/../../../../source/Lib/TLibCommon/TypeDef.h :
+ /home/daniel/Downloads/HEVC/svn_HEVCSoftware/trunk/build/linux/lib/TLibDecoder/../../../../source/Lib/TLibCommon/TComRom.h :
+ /home/daniel/Downloads/HEVC/svn_HEVCSoftware/trunk/build/linux/lib/TLibDecoder/../../../../source/Lib/TLibCommon/CommonDef.h :
+ /home/daniel/Downloads/HEVC/svn_HEVCSoftware/trunk/build/linux/lib/TLibDecoder/../../../../source/Lib/TLibCommon/TComBitStream.h :
+ /home/daniel/Downloads/HEVC/svn_HEVCSoftware/trunk/build/linux/lib/TLibDecoder/../../../../source/Lib/TLibDecoder/SyntaxElementParser.h :
+ /home/daniel/Downloads/HEVC/svn_HEVCSoftware/trunk/build/linux/lib/TLibDecoder/../../../../source/Lib/TLibDecoder/TDecConformance.h :
