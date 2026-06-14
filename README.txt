@@ -1,11 +1,12 @@
-This Repo contains 2 Main folders: one containing the documentation and the 
-other containing the code developed.
+This Repo contains 2 Main folders: one containing the documentation
+(dissertation and publication (https://ieeexplore.ieee.org/document/9014083/))
+and the other containing the code developed.
 
 This ReadMe file will try to explain the use of each of the scripts presented.
 
 A sample CT scan is provided in Training/CT.
 Note that similar files can be used in Validation/CT and Testing/CT
-Furthermore, note that all scripts have been designed such that 
+Furthermore, note that all scripts have been designed such that
 Training, Testing and Validation folders can have CT, MRI and Ultrasound
 folders inside them. Whilst CT and MRI are expected to contain dicom files,
 it is expected that Ultrasound has ultrasound videos.
@@ -59,9 +60,9 @@ from them. These are usually used in bash scipts found in other directories.
 	Outputs:	Enhancement Layer image for the co-ordinates specified by
 			the co-ordinate file path
 
-	Use: 		Extracts the Enhancement Layer (as specified by the 
-			documentation) between the Original Image and the 
-			Distorted Image at the co-ordinates specified by the 
+	Use: 		Extracts the Enhancement Layer (as specified by the
+			documentation) between the Original Image and the
+			Distorted Image at the co-ordinates specified by the
 			co-ordinate file.
 
 
@@ -157,7 +158,7 @@ from them. These are usually used in bash scipts found in other directories.
 Dissertation_Datasets Folder
 -----------------------------------------------------------------------
 This folder contains the datasets as well as scripts which make use of the
-above and other python code. The CNN models are also found here. The following 
+above and other python code. The CNN models are also found here. The following
 sections will describe each folder and its contents.
 
 NOTE: In the Training, Testing and Validation folders, only sample datasets are present.
@@ -185,7 +186,7 @@ Note: Some file paths might need to be adjusted manually
 
 
 -KERAS_MVSRCNN.py
-	Used to train the x2 CNN. 
+	Used to train the x2 CNN.
 	Specify in the script:
 
 		num_layers 		= Refers to the M parameter inthe documentation
@@ -210,7 +211,7 @@ Note: Some file paths might need to be adjusted manually
 
 
 -KERAS_Testing_Layer.py
-	Used to perform Super Resolution via the CNNs. 
+	Used to perform Super Resolution via the CNNs.
 	Each file specifies the layer. For x4 upscaling, this is specified in the file name.
 	The script is designed to iterate over all images in a folder
 	Images are normalized to the range [0,1] by the script
@@ -232,7 +233,7 @@ Note: Some file paths might need to be adjusted manually
 
 -Main_Script_EL.sh
 	Gets the EL and adds it to the upscaled frames. To do this, it uses Dissertation_Code/Get_Enhancement_Layer
-	and Dissertation_Code/Add_Enhancement_Layer. 
+	and Dissertation_Code/Add_Enhancement_Layer.
 	It then uses Dissertation_Code/Image_Metrics to obtain the new metrics
 
 -Weights Folder
@@ -262,7 +263,7 @@ For this reason, it is important to make sure that their placement is correct.
 				Window Width
 				Number of Frames to Remove from beginning
 				Number of Frames to Remove from end
-			The last 2 are used to remove unnecessary frames. The script also creates 
+			The last 2 are used to remove unnecessary frames. The script also creates
 			the necessary file structure.
 
 - 1_BMP_From_Video.sh
@@ -273,7 +274,7 @@ For this reason, it is important to make sure that their placement is correct.
 	Outputs:	BMP Files from the Video Files
 
 	Use: 		Extracts BMP images from the provided Video files. Note that the script
-			assumes that it must navigate to param1/Ultrasound folder. The script also creates 
+			assumes that it must navigate to param1/Ultrasound folder. The script also creates
 			the necessary file structure.
 
 -2_Split_Original.sh
@@ -305,8 +306,8 @@ For this reason, it is important to make sure that their placement is correct.
 
 	Outputs:	32x32 or 16x16 patches
 
-	Use: 		Downsamples the original images based on the factor chosen. These will be used 
-			as the LR input for training/validation. Makes use of the Image_Subsample 
+	Use: 		Downsamples the original images based on the factor chosen. These will be used
+			as the LR input for training/validation. Makes use of the Image_Subsample
 			script in Dissertation_Code.
 
 
@@ -318,7 +319,7 @@ For this reason, it is important to make sure that their placement is correct.
 
 	Outputs:	Motion Compensated Downscaled Frames
 
-	Use: 		Makes use of Disseration_Code/Motion_Compensation to obtain the motion compensated 
+	Use: 		Makes use of Disseration_Code/Motion_Compensation to obtain the motion compensated
 			downscaled frames. These will be split and used to train the CNN. The
 			preset parameter is passed on to OpenCV's Optical Flow algorithm
 
@@ -329,7 +330,7 @@ For this reason, it is important to make sure that their placement is correct.
 
 	Outputs:	32x32 or 16x16 patches
 
-	Use: 		Splits the Motion Compensated frames obtained by 5_Motion_Comensation.sh into 
+	Use: 		Splits the Motion Compensated frames obtained by 5_Motion_Comensation.sh into
 			32x32 or 16x16 patches which will be used for training/validation.
 			Makes use of the Image_Patches script in Dissertation_Code.
 
@@ -340,7 +341,7 @@ For this reason, it is important to make sure that their placement is correct.
 	Outputs:	3 text files (HR, LR, motion compensated) with a randomly shuffled list of patches
 
 	Use: 		Generates 3 text files (one for HR, LR and MC) containing paths for patches.
-			Note all the test files will match (ie, Patch_abc is found in line 123 in 
+			Note all the test files will match (ie, Patch_abc is found in line 123 in
 			HR, LR and MC patch files). These files will be used to generate the HDF5 files
 			used for training
 
@@ -352,16 +353,16 @@ For this reason, it is important to make sure that their placement is correct.
 
 	Use: 		Iterates over the text files generated by 7_Generate_Txt_Files.sh and creates hdf5 files
 			for training and validation. Note that the patches are filtered (as described by the
-			documentation). Note also that the files must then be combined into one by another 
+			documentation). Note also that the files must then be combined into one by another
 			script.
 
 -Testing_Datasets Folder
-	- The scripts found in this folder are similar to the ones already described, but are designed to 
+	- The scripts found in this folder are similar to the ones already described, but are designed to
 	  work for the Testing Datasets
 	- 1_BMP_From_DICOM.sh and 1_BMP_From_Video.sh --> Similar to the ones described above
 	- 2_Subsampling_Frames_x2.sh and 2_Subsampling_Frames_x4.sh --> Subsamples the padded frames by 2 and 4
 		--> Note: Image_Subsample_Padded script is used for x2 downscaling, to create the padded images
-	- 3_Create_Videos.sh 
+	- 3_Create_Videos.sh
 			Inputs: 	Path to Testing folder
 					Modality (CT, MRI, Ultrasound)
 					Factor (0, 2, 4; where 0 mean full resolution)
@@ -375,7 +376,7 @@ For this reason, it is important to make sure that their placement is correct.
 Dissertation_Datasets/Video_Compression
 -----------------------------------------------------------------------
 This folder contains scripts that deal with compression and decompression.
-They make use of the encoder, decoder and config files found in 
+They make use of the encoder, decoder and config files found in
 Dissertation_Datasets/HEVC.
 NOTE: FOR THE COMPRESSION AND DECOMPRESSION SCRIPTS, A TABLE IS SHOWN BELOW TO AID THE USER
 
@@ -386,9 +387,9 @@ NOTE: FOR THE COMPRESSION AND DECOMPRESSION SCRIPTS, A TABLE IS SHOWN BELOW TO A
 
 	Outputs:	Compressed Video, Compressed Bitstream, Compression Log
 
-	Use: 		Performs compression of the medical video for the specified Modality 
-			in the specified Testing Folder path using the specified QP. Note that 
-			it also sets up the necessary folder structure. This is used for x2, x4 
+	Use: 		Performs compression of the medical video for the specified Modality
+			in the specified Testing Folder path using the specified QP. Note that
+			it also sets up the necessary folder structure. This is used for x2, x4
 			and padded video.
 
 - 2_HEVC_Compression_Decompression_Lossless_Padded.sh
@@ -397,10 +398,10 @@ NOTE: FOR THE COMPRESSION AND DECOMPRESSION SCRIPTS, A TABLE IS SHOWN BELOW TO A
 
 	Outputs:	Compressed Video, Compressed Bitstream, Compression Log, Decompression Log
 
-	Use: 		Performs LOSSLESS compression and decompression of the padded medical video  
-			for the specified Modality in the specified Testing Folder path. Note that it 	
+	Use: 		Performs LOSSLESS compression and decompression of the padded medical video
+			for the specified Modality in the specified Testing Folder path. Note that it
  			also sets up the necessary folder structure. For all intents and purposes, this
-			is the original video. This is used to obtain certain statistics such as the 
+			is the original video. This is used to obtain certain statistics such as the
 			Compression Ratio and the time taken to compress or decompress 1 frame losslessly
 
 - 3_HEVC_Compression_Lossless_x2_x4.sh
@@ -409,8 +410,8 @@ NOTE: FOR THE COMPRESSION AND DECOMPRESSION SCRIPTS, A TABLE IS SHOWN BELOW TO A
 
 	Outputs:	Compressed Video, Compressed Bitstream, Compression Log
 
-	Use: 		Performs LOSSLESS compression of the x2 and x4 video for the  specified Modality 	
- 			in the specified Testing Folder path. Note that it also sets up the necessary 
+	Use: 		Performs LOSSLESS compression of the x2 and x4 video for the  specified Modality
+ 			in the specified Testing Folder path. Note that it also sets up the necessary
 			folder structure.
 
 - 4_Extract_Frames.sh
@@ -423,8 +424,8 @@ NOTE: FOR THE COMPRESSION AND DECOMPRESSION SCRIPTS, A TABLE IS SHOWN BELOW TO A
 	Use: 		Extracts the frames from the videos for the modality in the testing folder required,
 			for the QP value required. This also creates the necessary file strcutre.
 
-			Note: This is not used for lossless, since the lossless	compression of the medical video 
-			will result in the same frames obtained by upscaling, that is, no degredation is introduced 
+			Note: This is not used for lossless, since the lossless	compression of the medical video
+			will result in the same frames obtained by upscaling, that is, no degredation is introduced
 			and thus there is no need to extract the frames.
 
 - 5_Motion_Compensation_Script.sh
@@ -435,7 +436,7 @@ NOTE: FOR THE COMPRESSION AND DECOMPRESSION SCRIPTS, A TABLE IS SHOWN BELOW TO A
 				1: Medium
 				2: Fast
 				3: UltraFast
-			QP Value for which you want the script to run (for lossless, you would have obtained these from 
+			QP Value for which you want the script to run (for lossless, you would have obtained these from
 				a different file in Dissertation_Datasets/Data_Pre-Processing)
 
 	Outputs:	Motion Compensated Frames
@@ -452,7 +453,7 @@ NOTE: FOR THE COMPRESSION AND DECOMPRESSION SCRIPTS, A TABLE IS SHOWN BELOW TO A
 
 	Outputs:	Compressed Video, Compressed Bitstream, Compression Log, Decompression Log
 
-	Use: 		Performs LOSSLESS compression and decompression of the EL for the  
+	Use: 		Performs LOSSLESS compression and decompression of the EL for the
 			specified Modality in the specified Testing Folder path. Note that this is only
 			used for ELs of lossy compressed medical video with the specified QP. This is used
 			for padded, x2 and x4 medical videos.
@@ -465,7 +466,7 @@ NOTE: FOR THE COMPRESSION AND DECOMPRESSION SCRIPTS, A TABLE IS SHOWN BELOW TO A
 
 	Outputs:	Compressed Video, Compressed Bitstream, Compression Log, Decompression Log
 
-	Use: 		Performs LOSSLESS compression and decompression of the EL for the  
+	Use: 		Performs LOSSLESS compression and decompression of the EL for the
 			specified Modality in the specified Testing Folder path. Note that this is only
 			used for ELs of losslessly compressed x2 and x4 video post Bicubic or CNN upscaling
 			(by script 1_HEVC_Compression_Lossless_x2_x4.sh)
@@ -477,7 +478,7 @@ NOTE: FOR THE COMPRESSION AND DECOMPRESSION SCRIPTS, A TABLE IS SHOWN BELOW TO A
 
 	Outputs:	Decompression Log
 
-	Use: 		Performs decompression of the medical video  for the  specified Modality in the specified 
+	Use: 		Performs decompression of the medical video  for the  specified Modality in the specified
 			Testing Folder path. Note that this is only used for medical videos which were compressed
 			lossily (by script 1_HEVC_Compression.sh) (padded, x2 and x4)
 
@@ -487,12 +488,12 @@ NOTE: FOR THE COMPRESSION AND DECOMPRESSION SCRIPTS, A TABLE IS SHOWN BELOW TO A
 
 	Outputs:	Decompression Log
 
-	Use: 		Performs decompression of the losslessly compressed medical video (x2 and x4) 
-			for the  specified Modality in the specified Testing Folder path. 
-			Note that this is only used for x2 and x4 medical videos which were compressed losslessly 
+	Use: 		Performs decompression of the losslessly compressed medical video (x2 and x4)
+			for the  specified Modality in the specified Testing Folder path.
+			Note that this is only used for x2 and x4 medical videos which were compressed losslessly
 			(by script 1_HEVC_Compression_Lossless_x2_x4.sh)
 
-	
+
 		Video	||	Compression	||	Decompression
 	-----------------------------------------------------------------
 	Padded Lossless ||	     2		||	     2
